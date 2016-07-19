@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20160628 15:34:51.790" generator="Robot 3.0 (Python 2.7.10 on darwin)">
+<robot generated="20160628 18:10:42.521" generator="Robot 3.0 (Python 2.7.10 on darwin)">
 <suite source="/Users/lujiawen/robot-jenkins/robot-selenium-demo.robot" id="s1" name="Robot-Selenium-Demo">
 <kw type="setup" name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
@@ -7,17 +7,17 @@
 <arg>${HOMEPAGE}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20160628 15:34:51.880" level="INFO">Opening browser 'chrome' to base url 'https://www.baidu.com'</msg>
-<status status="PASS" endtime="20160628 15:34:54.529" starttime="20160628 15:34:51.880"></status>
+<msg timestamp="20160628 18:10:42.616" level="INFO">Opening browser 'chrome' to base url 'https://www.baidu.com'</msg>
+<status status="PASS" endtime="20160628 18:10:45.455" starttime="20160628 18:10:42.616"></status>
 </kw>
-<test id="s1-t1" name="Google searches and verifying results">
+<test id="s1-t1" name="Google elem and find ele.me">
 <kw type="setup" name="Go To" library="Selenium2Library">
 <doc>Navigates the active browser instance to the provided URL.</doc>
 <arguments>
 <arg>${HOMEPAGE}</arg>
 </arguments>
-<msg timestamp="20160628 15:34:54.531" level="INFO">Opening url 'https://www.baidu.com'</msg>
-<status status="PASS" endtime="20160628 15:34:54.798" starttime="20160628 15:34:54.530"></status>
+<msg timestamp="20160628 18:10:45.457" level="INFO">Opening url 'https://www.baidu.com'</msg>
+<status status="PASS" endtime="20160628 18:10:45.762" starttime="20160628 18:10:45.456"></status>
 </kw>
 <kw name="Google and check results">
 <arguments>
@@ -30,25 +30,41 @@
 <arg>id=kw</arg>
 <arg>${searchkey}</arg>
 </arguments>
-<msg timestamp="20160628 15:34:54.800" level="INFO">Typing text '饿了么' into text field 'id=kw'</msg>
-<status status="PASS" endtime="20160628 15:34:54.953" starttime="20160628 15:34:54.800"></status>
+<msg timestamp="20160628 18:10:45.763" level="INFO">Typing text '饿了么' into text field 'id=kw'</msg>
+<status status="PASS" endtime="20160628 18:10:45.922" starttime="20160628 18:10:45.763"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>id=su</arg>
 </arguments>
-<msg timestamp="20160628 15:34:54.954" level="INFO">Clicking button 'id=su'.</msg>
-<status status="PASS" endtime="20160628 15:34:55.046" starttime="20160628 15:34:54.954"></status>
+<msg timestamp="20160628 18:10:45.923" level="INFO">Clicking button 'id=su'.</msg>
+<status status="PASS" endtime="20160628 18:10:46.006" starttime="20160628 18:10:45.923"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>${result}</arg>
 </arguments>
-<status status="PASS" endtime="20160628 15:34:55.719" starttime="20160628 15:34:55.046"></status>
+<status status="PASS" endtime="20160628 18:10:46.744" starttime="20160628 18:10:46.006"></status>
 </kw>
-<status status="PASS" endtime="20160628 15:34:55.719" starttime="20160628 15:34:54.799"></status>
+<status status="PASS" endtime="20160628 18:10:46.744" starttime="20160628 18:10:45.762"></status>
+</kw>
+<tags>
+<tag>ele.me</tag>
+<tag>smoke</tag>
+<tag>饿了么</tag>
+</tags>
+<status status="PASS" endtime="20160628 18:10:46.744" critical="yes" starttime="20160628 18:10:45.455"></status>
+</test>
+<test id="s1-t2" name="Google deveo and find its web site">
+<kw type="setup" name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+</arguments>
+<msg timestamp="20160628 18:10:46.747" level="INFO">Opening url 'https://www.baidu.com'</msg>
+<status status="PASS" endtime="20160628 18:10:47.044" starttime="20160628 18:10:46.746"></status>
 </kw>
 <kw name="Google and check results">
 <arguments>
@@ -61,25 +77,40 @@
 <arg>id=kw</arg>
 <arg>${searchkey}</arg>
 </arguments>
-<msg timestamp="20160628 15:34:55.721" level="INFO">Typing text 'deveo' into text field 'id=kw'</msg>
-<status status="PASS" endtime="20160628 15:34:55.927" starttime="20160628 15:34:55.720"></status>
+<msg timestamp="20160628 18:10:47.046" level="INFO">Typing text 'deveo' into text field 'id=kw'</msg>
+<status status="PASS" endtime="20160628 18:10:47.179" starttime="20160628 18:10:47.045"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>id=su</arg>
 </arguments>
-<msg timestamp="20160628 15:34:55.928" level="INFO">Clicking button 'id=su'.</msg>
-<status status="PASS" endtime="20160628 15:34:55.986" starttime="20160628 15:34:55.928"></status>
+<msg timestamp="20160628 18:10:47.180" level="INFO">Clicking button 'id=su'.</msg>
+<status status="PASS" endtime="20160628 18:10:47.246" starttime="20160628 18:10:47.179"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>${result}</arg>
 </arguments>
-<status status="PASS" endtime="20160628 15:34:56.473" starttime="20160628 15:34:55.986"></status>
+<status status="PASS" endtime="20160628 18:10:47.543" starttime="20160628 18:10:47.246"></status>
 </kw>
-<status status="PASS" endtime="20160628 15:34:56.473" starttime="20160628 15:34:55.719"></status>
+<status status="PASS" endtime="20160628 18:10:47.544" starttime="20160628 18:10:47.045"></status>
+</kw>
+<tags>
+<tag>deveo</tag>
+<tag>eficode</tag>
+</tags>
+<status status="PASS" endtime="20160628 18:10:47.544" critical="yes" starttime="20160628 18:10:46.746"></status>
+</test>
+<test id="s1-t3" name="Google robot and find its web site">
+<kw type="setup" name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+</arguments>
+<msg timestamp="20160628 18:10:47.546" level="INFO">Opening url 'https://www.baidu.com'</msg>
+<status status="PASS" endtime="20160628 18:10:47.825" starttime="20160628 18:10:47.546"></status>
 </kw>
 <kw name="Google and check results">
 <arguments>
@@ -92,48 +123,53 @@
 <arg>id=kw</arg>
 <arg>${searchkey}</arg>
 </arguments>
-<msg timestamp="20160628 15:34:56.474" level="INFO">Typing text 'robot framework' into text field 'id=kw'</msg>
-<status status="PASS" endtime="20160628 15:34:56.632" starttime="20160628 15:34:56.473"></status>
+<msg timestamp="20160628 18:10:47.827" level="INFO">Typing text 'robot framework' into text field 'id=kw'</msg>
+<status status="PASS" endtime="20160628 18:10:48.086" starttime="20160628 18:10:47.826"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>id=su</arg>
 </arguments>
-<msg timestamp="20160628 15:34:56.632" level="INFO">Clicking button 'id=su'.</msg>
-<status status="PASS" endtime="20160628 15:34:56.671" starttime="20160628 15:34:56.632"></status>
+<msg timestamp="20160628 18:10:48.087" level="INFO">Clicking button 'id=su'.</msg>
+<status status="PASS" endtime="20160628 18:10:48.169" starttime="20160628 18:10:48.087"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>${result}</arg>
 </arguments>
-<status status="PASS" endtime="20160628 15:34:57.144" starttime="20160628 15:34:56.671"></status>
+<status status="PASS" endtime="20160628 18:10:48.199" starttime="20160628 18:10:48.169"></status>
 </kw>
-<status status="PASS" endtime="20160628 15:34:57.145" starttime="20160628 15:34:56.473"></status>
+<status status="PASS" endtime="20160628 18:10:48.199" starttime="20160628 18:10:47.826"></status>
 </kw>
 <tags>
-<tag>templated-tests</tag>
+<tag>robot</tag>
 </tags>
-<status status="PASS" endtime="20160628 15:34:57.145" critical="yes" starttime="20160628 15:34:54.529"></status>
+<status status="PASS" endtime="20160628 18:10:48.199" critical="yes" starttime="20160628 18:10:47.545"></status>
 </test>
 <kw type="teardown" name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20160628 15:34:57.226" starttime="20160628 15:34:57.146"></status>
+<status status="PASS" endtime="20160628 18:10:48.271" starttime="20160628 18:10:48.201"></status>
 </kw>
 <doc>Demonstrate Selenium2Library by googling.</doc>
-<status status="PASS" endtime="20160628 15:34:57.226" starttime="20160628 15:34:51.793"></status>
+<status status="PASS" endtime="20160628 18:10:48.271" starttime="20160628 18:10:42.524"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="1">Critical Tests</stat>
-<stat fail="0" pass="1">All Tests</stat>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
 </total>
 <tag>
-<stat fail="0" pass="1">templated-tests</stat>
+<stat fail="0" pass="1">deveo</stat>
+<stat fail="0" pass="1">eficode</stat>
+<stat fail="0" pass="1">ele.me</stat>
+<stat fail="0" pass="1">robot</stat>
+<stat fail="0" pass="1">smoke</stat>
+<stat fail="0" pass="1">饿了么</stat>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Robot-Selenium-Demo" pass="1">Robot-Selenium-Demo</stat>
+<stat fail="0" id="s1" name="Robot-Selenium-Demo" pass="3">Robot-Selenium-Demo</stat>
 </suite>
 </statistics>
 <errors>
